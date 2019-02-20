@@ -70,9 +70,11 @@ class ModuleInstaller extends LibraryInstaller {
 	    			$pattern);
 	    	$this->removeFromGitIgnore($this->getPublicDestDirPath() . DIRECTORY_SEPARATOR . self::ASSETS_DIR,
 	    			$pattern);
+			parent::uninstall($repo, $package);
+    	} else {
+    		$repo->removePackage($package);
     	}
 		
-		parent::uninstall($repo, $package);
 	}
 	
 	const N2N_MODULE_TYPE = 'n2n-module';
