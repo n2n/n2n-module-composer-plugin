@@ -12,12 +12,6 @@
             "homepage": "http://www.von-burg.net"
         }
     ],
-    "require": {
-        "composer-plugin-api": "^1.0"
-    },
-    "require-dev": {
-        "composer/composer": "1.*"
-    },
     "extra": {
         "class": "n2n\\composer\\module\\ModulePlugin"
     },
