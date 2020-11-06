@@ -22,8 +22,8 @@
         "class": "n2n\\composer\\module\\ModulePlugin"
     },
     "autoload": {
-	    "psr-4": {
+        "psr-4": {
 	      	"n2n\\composer\\module\\": "src/n2n/composer/module"
-	    }
-	}
+        }
+    }
 }
