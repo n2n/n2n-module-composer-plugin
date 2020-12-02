@@ -319,8 +319,8 @@ class ModuleInstaller extends LibraryInstaller {
 		
 		$filename = $dirPath . DIRECTORY_SEPARATOR . '.gitignore';
 		
-		$contents = [];
 		if (is_file($filename)) return;
+		$contents = file($filename);
 		
 		$newContents = [];
 		foreach ($contents as $content) {
@@ -329,7 +329,7 @@ class ModuleInstaller extends LibraryInstaller {
 			$newContents[] = $content;
 		}
 		
-		file_put_contents($filename, $contents);
+		file_put_contents($filename, $newContents);
 	}
 	
 // 	private function copy($source, $target) {
